@@ -1,5 +1,5 @@
 # Real-Time-Rehabilitation
-Real time rehabilitation software with kinect v2
+Real time rehabilitation software with kinect v2. We implement the spatio temporal graph convolutional neural network for rehabilitation exercise assessment according to the following paper, * S. Deb, M. F. Islam, S. Rahman and S. Rahman, "[Graph Convolutional Networks for Assessment of Physical Rehabilitation Exercises](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9709340)," in IEEE Transactions on Neural Systems and Rehabilitation Engineering, vol. 30, pp. 410-419, 2022, doi: 10.1109/TNSRE.2022.3150392.
 
 # How to run this code
 First and foremost you need the Microsoft Kinect v2 and install the associated dependencies. After that follow these steps:
