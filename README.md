@@ -2,6 +2,7 @@
 Real time rehabilitation software with kinect v2
 
 # How to run this code
+First and foremost you need the Microsoft Kinect v2 and install the associated dependencies. After that follow these steps:
 1) Install requirement.txt file
 2) Download the model parameters from the [google drive](https://drive.google.com/drive/u/1/folders/1c2Nucl8iIFhDvPZUjdkTFYoksaX1TpK_) and store them to best model folder
 3) Run PyBodyGame.py file
