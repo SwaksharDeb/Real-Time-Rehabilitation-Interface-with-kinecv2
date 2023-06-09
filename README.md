@@ -1,7 +1,8 @@
 # Real-Time-Rehabilitation
 Real time rehabilitation software with kinect v2
 
-
+# Best model
+Download the model parameters from the [google drive] (https://drive.google.com/drive/u/1/folders/1c2Nucl8iIFhDvPZUjdkTFYoksaX1TpK_)
 # Prediction
 Output for the healthy person. The correctness score is shown in real time at the top middle of the screen. Consequently, exercise name is shown at the top right.
 
