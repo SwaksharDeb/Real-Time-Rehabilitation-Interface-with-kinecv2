@@ -5,7 +5,7 @@ Real time rehabilitation software with kinect v2
 First and foremost you need the Microsoft Kinect v2 and install the associated dependencies. After that follow these steps:
 1) Install requirement.txt file
 2) Download the model parameters from the [google drive](https://drive.google.com/drive/u/1/folders/1c2Nucl8iIFhDvPZUjdkTFYoksaX1TpK_) and store them to best model folder
-3) Run PyBodyGame.py file
+3) Run PyKinectBodyGame_v1.py file
  
 # Prediction
 Output for the healthy person. The correctness score is shown in real time at the top middle of the screen. Consequently, exercise name is shown at the top right.
