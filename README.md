@@ -3,9 +3,9 @@ Real time rehabilitation assessment with kinect v2. We implement the spatio temp
 
 # How to run this code
 First and foremost you need the Microsoft Kinect v2 and install the associated dependencies. After that follow these steps:
-1) Install `requirements.txt` file.
+1) Install the requirements.txt file the command `pip install -r requirements.txt`.
 2) Download the model parameters from the [google drive](https://drive.google.com/drive/u/1/folders/1c2Nucl8iIFhDvPZUjdkTFYoksaX1TpK_) and store them in the best model folder.
-3) Run the `PyKinectBodyGame_v1.py` file.
+3) Run the `PyKinectBodyGame_v1.py` file with the command `python PyKinectBodyGame_v1.py` in the terminal.
  
 # Prediction
 Output for the healthy person. The correctness score is shown in real time at the top middle of the screen. Consequently, exercise name is shown at the top left.
