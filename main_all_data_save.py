@@ -30,7 +30,7 @@ else:
     import thread
 
 from basic_info import main
-
+import threading
 
 # from PyKinectBodyGame_savedata import BodyGameRuntime
 ID = main()
@@ -108,8 +108,14 @@ class BodyGameRuntime(object):
             key = cv2.waitKey(1)
             if key == 27: break
         atexit.register(all_done)
-        
+
         
 __main__ = "Kinect v2 Body Game"
 game = BodyGameRuntime();
-game.run();
+
+t1 = threading.Thread(target=game.run)
+t2 = threading.Thread(target=game.run)
+
+t1.start()
+t2.start()
+#game.run();
