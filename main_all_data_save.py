@@ -13,7 +13,7 @@ import numpy as np
 import cv2
 import pickle
 import atexit
-
+from datetime import datetime
 import os
 # from pykinect2 import PyKinectV2
 # from pykinect2.PyKinectV2 import *
@@ -59,12 +59,22 @@ def all_done():
 writerC = cv2.VideoWriter(ID+'/Kinect_Color.mp4', cv2.VideoWriter_fourcc(*'XVID'),25, (1920, 1080))
 
 class BodyGameRuntime(object):
-    def __init__(self):
+    def __init__(self, target_time:str):  #sample targe_time format = 06:01:00 (hour:minute:second)
         pygame.init()
         self._kinect = PyKinectRuntime.PyKinectRuntime(PyKinectV2.FrameSourceTypes_Color | PyKinectV2.FrameSourceTypes_Body)
         self._bodies = None
+        self.target_time = target_time
     def run(self):
         joints_list=[]
+        loop_controller = True
+        while loop_controller:
+            now = datetime.now()
+            
+            current_time = now.strftime("%H:%M:%S")
+            if current_time == self.target_time:
+                print("Your Requrested Target Time =", current_time, "is reached")
+                loop_controller = False
+
         while True:
             if self._kinect.has_new_body_frame(): 
                 self._bodies = self._kinect.get_last_body_frame()
@@ -111,11 +121,12 @@ class BodyGameRuntime(object):
 
         
 __main__ = "Kinect v2 Body Game"
-game = BodyGameRuntime();
+target_time = input("Set the target time: ")
+game = BodyGameRuntime(target_time);
 
-t1 = threading.Thread(target=game.run)
-t2 = threading.Thread(target=game.run)
+# t1 = threading.Thread(target=game.run)
+# t2 = threading.Thread(target=game.run)
 
-t1.start()
-t2.start()
-#game.run();
+# t1.start()
+# t2.start()
+game.run();
