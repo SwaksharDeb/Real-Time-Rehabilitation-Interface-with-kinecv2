@@ -66,10 +66,10 @@ class BodyGameRuntime(object):
         self.target_time = target_time
     def run(self):
         joints_list=[]
+        
         loop_controller = True
         while loop_controller:
             now = datetime.now()
-            
             current_time = now.strftime("%H:%M:%S")
             if current_time == self.target_time:
                 print("Your Requrested Target Time =", current_time, "is reached")
