@@ -59,14 +59,14 @@ def all_done():
 writerC = cv2.VideoWriter(ID+'/Kinect_Color.mp4', cv2.VideoWriter_fourcc(*'XVID'),25, (1920, 1080))
 
 class BodyGameRuntime(object):
-    def __init__(self, target_time:str):  #sample targe_time format = 06:01:00 (hour:minute:second)
+    def __init__(self, target_time:str):  #sample targe_time format = '06:01:00' (hour:minute:second)
         pygame.init()
         self._kinect = PyKinectRuntime.PyKinectRuntime(PyKinectV2.FrameSourceTypes_Color | PyKinectV2.FrameSourceTypes_Body)
         self._bodies = None
         self.target_time = target_time
     def run(self):
         joints_list=[]
-        
+
         loop_controller = True
         while loop_controller:
             now = datetime.now()
